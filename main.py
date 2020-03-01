@@ -1,5 +1,5 @@
 import json
-from meteo_company_function import MeteoCompanyClient
+from meteo_company_client import MeteoCompanyClient
 
 LATITUDE=<<your latitude>>
 LONGITUDE=<<your longitude>>

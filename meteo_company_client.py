@@ -30,6 +30,7 @@ class MeteoCompanyClient:
         forecasts=requests.get(self._uri).json()['ForecastResult']
 
         rain_list = [Rain(forecast) for forecast in forecasts]
-        rain_future = [rain for rain in rain_list if rain.epoch > current_time]
+        # return current rain plus forecast
+        rain_future = [rain for rain in rain_list if rain.epoch > current_time - 300000]
 
         self._rain_list = rain_future
